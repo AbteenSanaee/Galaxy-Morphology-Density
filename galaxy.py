@@ -21,3 +21,7 @@ class Galaxy:
         self.sersic = sersic
         self.fifth = None
         self.neighbours = []
+
+    def __repr__(self):
+        return "ID: " + str(self.ID_Number) + ", z: " + str(self.redshift) + ", Mass: " + str(self.mass) + ", RA: " + \
+               str(self.RA) + ", dec: " + str(self.dec) + ", sersic: " + str(self.sersic)
