@@ -25,3 +25,9 @@ class Galaxy:
     def __repr__(self):
         return "ID: " + str(self.ID_Number) + ", z: " + str(self.redshift) + ", Mass: " + str(self.mass) + ", RA: " + \
                str(self.RA) + ", dec: " + str(self.dec) + ", sersic: " + str(self.sersic)
+
+    def __eq__(self, other):
+        if isinstance(other, Galaxy):
+            return self.ID_Number == other.ID_Number
+        else:
+            return False
