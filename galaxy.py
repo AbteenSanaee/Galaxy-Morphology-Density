@@ -31,3 +31,6 @@ class Galaxy:
             return self.ID_Number == other.ID_Number
         else:
             return False
+
+    def distance(self, gal):
+        return (math.sqrt((((self.RA - gal.RA)*(math.cos(math.radians(self.dec))))**2) + ((self.dec - gal.dec)**2)))*((math.pi)/180)
